@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ali's Website</title>
+  </head>
+  <body>
+    <header class="header sticky-header mb-10">
+      <div class="header-container">
+        <img class="logo" src="pics/AA.png" alt="Logo" />
+        <nav>
+          <ul class="nav__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <a class="cta" href="#"
+              ><button
+                class="hire-me-btn"
+                onclick="window.location.href='mailto:abdulali115h@gmail.com?subject=%F0%9F%A4%98%20Hi%20Ali,%20I%27d%20like%20to%20hire%20you'"
+                target="_blank"
+              >
+                HIRE ME
+              </button></a
+            >
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="hero-text">
+        <h1>
+          Hi, my name is <b>Abdulmuhaimin.</b>
+          <br />
+          <span class="subheading"
+            >I'm an inspiring software developer from London, Ontario</span
+          >
+        </h1>
+      </div>
+      <div class="intro-container">
+        <div class="intro-photo">
+          <img
+            src="pics/personalImage.jpg"
+            alt="Personal Image"
+            class="intro-photo"
+          />
+        </div>
+        <div class="education-card">
+          <h3>Education</h3>
+          <p class="school">Fanshawe College</p>
+          <p class="degree">Advanced Diploma</p>
+          <p class="major">Computer Programming and Analysis</p>
+          <p class="major">3.9 GPA</p>
+          <p class="year">Expected Graduation: 2025</p>
+        </div>
+      </div>
+      <div class="scroll-section">
+        <div class="scroll-text">Scroll</div>
+        <div class="line-container">
+          <div class="vertical-line"></div>
+        </div>
+      </div>
+      <div class="section-title">
+        <h2>About Me</h2>
+        <p class="terminal-subtitle">
+          Ask me about my skills, experience, or anything else!
+        </p>
+      </div>
+
+      <div class="terminal-container mb-">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-button red"></span>
+            <span class="terminal-button yellow"></span>
+            <span class="terminal-button green"></span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-output" id="terminalOutput"></div>
+            <div class="terminal-input-line">
+              <span class="terminal-prompt">$</span>
+              <input type="text" id="terminalInput" autofocus />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-section">
+        <div class="scroll-text"></div>
+        <div class="line-container">
+          <div class="vertical-line"></div>
+        </div>
+      </div>
+
+      <section id="experience" class="experience-section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <div class="experience-content">
+              <h3 class="experience-title">
+                Software Quality Assurance Engineer
+              </h3>
+              <p class="experience-company">Big Blue Bubble</p>
+              <p class="experience-date">
+                September 2022 - April 2023 · 8 months
+              </p>
+              <p class="experience-location">
+                London, Ontario, Canada · On-site
+              </p>
+              <ul class="experience-details">
+                <li>
+                  Focused on Test Automation and Automated Software Testing
+                </li>
+                <li>
+                  Contributed to ensuring software quality for Big Blue Bubble's
+                  projects
+                </li>
+                <li>
+                  Gained hands-on experience in a professional game development
+                  environment
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="experience-item">
+            <div class="experience-content">
+              <h3 class="experience-title">Web Developer Intern</h3>
+              <p class="experience-company">CensusX</p>
+              <p class="experience-date">April 2024 - August 2024 · 4 months</p>
+              <p class="experience-location">Remote</p>
+              <ul class="experience-details">
+                <li>
+                  Developed the company website using Next.js, Node.js, and
+                  MongoDB
+                </li>
+                <li>Implemented user authentication using Clerk</li>
+                <li>
+                  Contributed to the development of a startup in pre-launch
+                  phase
+                </li>
+                <li>
+                  Gained experience in modern web development technologies and
+                  practices
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="scroll-section">
+        <div class="scroll-text"></div>
+        <div class="line-container">
+          <div class="vertical-line"></div>
+        </div>
+      </div>
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-container">
+          <div class="project-card">
+            <img
+              src="pics/pacMan.png"
+              alt="Pac-Man Game"
+              class="project-image"
+            />
+            <h3 class="project-title">Project 1</h3>
+            <p p class="project-summary">A brief summary of Pac-Man</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">C++</span>
+            </div>
+            <div class="project-buttons">
+              <button class="project-details-btn">More Details</button>
+              <a
+                href="https://project1-demo-url.com"
+                target="_blank"
+                class="live-demo-btn"
+                >Live Demo</a
+              >
+            </div>
+            <div class="project-details hidden">
+              <p>Detailed description of project 1 goes here.</p>
+            </div>
+          </div>
+
+          <!-- Repeat for other projects -->
+          <div class="project-card">
+            <img
+              src="pics/game-discovery.png"
+              alt="Games background image"
+              class="project-image"
+            />
+            <h3 class="project-title">Game discovery App</h3>
+            <p class="project-summary">A brief summary of project 2.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+            <div class="project-buttons">
+              <button class="project-details-btn">More Details</button>
+              <a
+                href="https://project2-demo-url.com"
+                target="_blank"
+                class="live-demo-btn"
+                >Live Demo</a
+              >
+            </div>
+            <div class="project-details hidden">
+              <p>Detailed description of project 2 goes here.</p>
+            </div>
+          </div>
+          <!-- Repeat for other projects -->
+          <div class="project-card">
+            <img
+              src="path/to/project2-image.jpg"
+              alt="Project 2"
+              class="project-image"
+            />
+            <h3 class="project-title">Project 2</h3>
+            <p class="project-summary">A brief summary of project 2.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+            <div class="project-buttons">
+              <button class="project-details-btn">More Details</button>
+              <a
+                href="https://project2-demo-url.com"
+                target="_blank"
+                class="live-demo-btn"
+                >Live Demo</a
+              >
+            </div>
+            <div class="project-details hidden">
+              <p>Detailed description of project 2 goes here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="scroll-section">
+        <div class="scroll-text"></div>
+        <div class="line-container">
+          <div class="vertical-line"></div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <b>
+          <h3>Socail Media</h3>
+        </b>
+        <ul class="social-links">
+          <li>
+            <a href="https://github.com/Abdulmuhaimin-Ali" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/abdulmuhaimin-ali/"
+              target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/abdulmuhaimin-ali/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://stackoverflow.com/users/27036065/ali-abdu"
+              target="_blank"
+              ><i class="fab fa-stack-overflow"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3><b>Contact</b></h3>
+
+        <p class="footer-contact">Email: abdulali115h@gmail.com</p>
+        <p class="footer-contact">Location: London, Ontario</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="font-size: 12px">
+        &copy; 2024 Abdulmuhaimin. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</html>
