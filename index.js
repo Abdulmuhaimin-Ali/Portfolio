@@ -76,6 +76,22 @@ document.addEventListener("DOMContentLoaded", function () {
         getIpConfig();
         break;
       case "rm":
+        if (args[1]) {
+          if (projects.some((p) => p.name === args[1])) {
+            addToOutput(`Deleting ${args[1]}...`);
+            addToOutput(
+              `Nice try! I won't let you delete my files that easily. 😄`
+            );
+          } else {
+            addToOutput(`File not found: ${args[1]}`);
+          }
+          break;
+        } else {
+          addToOutput(
+            "Please enter a file name to delete. For example: rm file.txt"
+          );
+          break;
+        }
         addOutput(`Nice try! I won't let you delete my files that easily. 😄`);
         break;
       case "skills":
