@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         getIpConfig();
         break;
-      case "rm":
+      case "rmdir":
         if (args[1]) {
           if (projects.some((p) => p.name === args[1])) {
             addToOutput(`Deleting ${args[1]}...`);
@@ -102,11 +102,24 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         } else {
           addToOutput(
-            "Please enter a file name to delete. For example: rm file.txt"
+            "Please enter a directory name to delete. For example: rmdir project1"
           );
           break;
         }
         addOutput(`Nice try! I won't let you delete my files that easily. 😄`);
+        break;
+      case "rm":
+        if (args[1] === "-rf") {
+          if (projects.some((p) => p.name === args[2])) {
+            addToOutput(`Deleting all files in ${args[2]}...`);
+            addToOutput(
+              `Nice try! I won't let you delete my files that easily. 😄`
+            );
+          }
+          break;
+        } else {
+          addToOutput(`command not found: ${command.print}`);
+        }
         break;
       case "skills":
         addToOutput("Languages: C++, Java, JavaScript, Python, HTML, CSS");
