@@ -516,29 +516,6 @@ button:hover {
   margin-bottom: 8px;
 }
 
-@media screen and (max-width: 767px) {
-  .experience-timeline::after {
-    left: 31px;
-  }
-
-  .experience-item {
-    padding-left: 50px;
-    padding-right: 10px;
-  }
-  .intro-image-container,
-  .education-card {
-    max-width: 100%;
-  }
-
-  .experience-item::after {
-    left: 11px;
-  }
-
-  .experience-item:nth-child(even) {
-    left: 0;
-  }
-}
-
 .about-section {
   padding: 50px 20px;
   background-color: #ffffff;
@@ -617,17 +594,6 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
-  .about-content {
-    flex-direction: column;
-  }
-
-  .about-image {
-    width: 250px;
-    height: 250px;
-  }
-}
-
 .footer {
   background-color: #333;
   color: #fff;
@@ -701,15 +667,6 @@ button:hover {
   border-top: 1px solid #555;
 }
 
-@media screen and (max-width: 767px) {
-  .footer-content {
-    flex-direction: column;
-  }
-
-  .footer-section {
-    margin-bottom: 30px;
-  }
-}
 .scroll-section {
   display: flex;
   align-items: center;
@@ -739,15 +696,74 @@ button:hover {
   width: 2px; /* thickness of the vertical line */
   height: 300px; /* height of the vertical line */
 }
+/* Large Screens (Desktops) */
+@media screen and (min-width: 1024px) {
+  .container-md {
+    max-width: 960px;
+    padding: 0 20px;
+  }
 
-@media only screen and (max-width: 768px) {
-  .nav-menu {
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .project-card {
+    flex: 0 0 calc(33.333% - 27px);
+  }
+
+  .about-content {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .about-image {
+    flex: 0 0 300px;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .container-md {
+    max-width: 720px;
+  }
+
+  .project-container {
+    gap: 30px;
+  }
+
+  .project-card {
+    flex: 0 0 calc(50% - 15px);
+  }
+
+  .about-content {
+    gap: 30px;
+  }
+
+  .about-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Small Screens (Mobile) */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 56.25%; /* 9px base for smaller screens */
+  }
+
+  .container-md {
+    padding: 0 15px;
+  }
+
+  /* Header/Navigation adjustments */
+  .nav__links {
     position: fixed;
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    /* background-color: #fff; */
-    background-color: #222;
+    background-color: rgba(255, 255, 255, 0.95);
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -755,11 +771,7 @@ button:hover {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
-  .nav-link {
-    color: #fff;
-  }
-
-  .nav-menu.active {
+  .nav__links.active {
     left: 0;
   }
 
@@ -767,44 +779,163 @@ button:hover {
     margin: 2.5rem 0;
   }
 
-  .terminal-container {
-    padding: 50px;
+  /* Project section adjustments */
+  .project-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  /* Experience timeline adjustments */
+  .experience-timeline::after {
+    left: 31px;
+  }
+
+  .experience-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .experience-item::after {
+    left: 21px;
+  }
+
+  .experience-item:nth-child(even) {
+    left: 0;
+  }
+
+  /* About section adjustments */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-text .subheading {
+    font-size: 1.8rem;
   }
 
   .terminal {
-    height: 400px;
+    height: 350px;
   }
 
-  .project-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .project-card {
-    width: calc(50% - 20px);
+  .intro-photo {
+    width: 180px;
+    height: 180px;
   }
 }
 
-/* Media query for desktops */
-@media screen and (min-width: 1024px) {
-  .project-card {
-    width: calc(33.333% - 20px);
+/* Height-based media query for smaller screens */
+@media screen and (max-height: 700px) {
+  .intro-container {
+    padding: 30px 20px;
+  }
+
+  .intro-photo {
+    width: 150px;
+    height: 150px;
   }
 }
 
-/* add styles on elements */
-/* Ensure compatibility for different browsers */
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-  .sticky-header.scrolled {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+/* Print styles */
+@media print {
+  .sticky-header,
+  .terminal-container,
+  .project-buttons,
+  .footer {
+    display: none;
+  }
+
+  body {
+    padding-top: 0;
+    background: none;
+  }
+
+  .project-card,
+  .experience-content {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
 
-/* For browsers that don't support backdrop-filter */
-@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-  .sticky-header.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav__links.active {
+    display: flex;
+  }
+
+  .nav__links li {
+    margin: 10px 0;
+  }
+
+  .nav__links li a {
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .cta {
+    margin-top: 10px;
+  }
+
+  .hire-me-btn {
+    width: 100%;
   }
 }

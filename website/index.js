@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector(".menu-icon");
+  const navLinks = document.querySelector(".nav__links");
+
+  menuIcon.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll(".nav__links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+  });
+
   terminalOutput = document.getElementById("terminalOutput");
   terminalInput = document.getElementById("terminalInput");
 
